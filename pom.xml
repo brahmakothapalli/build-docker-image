@@ -27,6 +27,11 @@
             <artifactId>maven-compiler-plugin</artifactId>
             <version>3.11.0</version>
         </dependency>
-
     </dependencies>
+
+    <build>
+        <finalName>build-docker-image</finalName>
+    </build>
+
+
 </project>
