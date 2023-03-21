@@ -24,10 +24,15 @@ pipeline {
                         sh 'sudo docker login -u brahmakothapalli -p ${dockerhubpwd}'
                     }
                     sh 'sudo docker push brahmakothapalli/build-docker-image'
-
                 }
             }
         }
-
+        stage('Run docker image'){
+            steps{
+                script{
+                    sh 'sudo docker run brahmakothapalli/build-docker-image'
+                }
+            }
+        }
     }
 }
